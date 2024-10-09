@@ -1,0 +1,136 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #b2ebf2, #80deea);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    background-image: url(pic/pizza\ slice\ .jpg)
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main1 main2 right"
+        "footer footer footer";
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header {
+    grid-area: header;
+    background: linear-gradient(120deg, #5d9bfb, #2196f3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Text', serif;
+    margin-bottom: 10px;
+    color: #006064;
+}
+
+ul, ol {
+    margin: 20px 0;
+    padding: 0 20px;
+    list-style: none;
+    line-height: 1.8;
+}
+
+ul li:before {
+    content: ': ';
+    color: #0097a7;
+    font-weight: bold;
+}
+
+#main1, #main2, #right {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #0288d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0277bd;
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.fleximg {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.fleximg img {
+    flex: 1 1 calc(30% - 10px);
+    max-width: calc(30% - 10px);
+}
+
+.fleximg2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fleximg2 img {
+    max-width: 200px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header header "
+            "main1 main2" 
+            "right right"
+            "footer footer";
+    }
+
+    .fleximg img, .fleximg2 img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "main1"
+            "main2" 
+            "right"
+            "footer";
+    }
+
+    .fleximg img, .fleximg2 img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

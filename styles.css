@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('Picture/background.jpg'); /* เพิ่มพื้นหลังจากไฟล์ */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
+    color: #ffffff; /* เปลี่ยนสีตัวหนังสือเป็นสีขาว */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Navbar */
+#navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* เพิ่มพื้นหลังแบบโปร่งแสง */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar ul li a {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #ffffff; /* เปลี่ยนสีเป็นสีขาว */
+}
+
+#navbar ul li a:hover {
+    color: #007bff;
+}
+
+/* Section Styles */
+section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังสีขาวโปร่งแสง */
+    color: #000000; /* เปลี่ยนสีข้อความภายใน section */
+}
+
+/* Profile Section */
+#profile {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#profile h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#profile p {
+    font-weight: 300;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+#profile strong {
+    font-weight: 500;
+}
+
+/* Skill Section */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 40px;
+    justify-items: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skill-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.skill {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100px;
+}
+
+.skill img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Assignment Button Styles */
+button.assignment-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.assignment-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.assignment-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Video and Image Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #d3e0e9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #007bff;
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .welcome-picture, .profile-picture {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .welcome-picture, .profile-picture {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-picture, .profile-picture {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    /* ทำให้ video responsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #d3e0e9; /* พื้นหลังเมื่อยังไม่ได้โหลดวิดีโอ */
+    border-radius: 10px; /* ขอบมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* ทำให้ขอบของ iframe มนตาม container */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto; /* Center the image */
+}
+
+
+}

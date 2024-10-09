@@ -1,0 +1,107 @@
+/* สไตล์พื้นฐานของ body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ฟอร์มและ fieldset */
+form {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* สไตล์สำหรับ input และปุ่ม */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #218838;
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+}
+
+input[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+/* ข้อความแจ้งเตือน error */
+#errormsg, #loginError {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* สไตล์สำหรับป้ายข้อความและการจัดเรียง */
+label, span {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+span {
+    color: #555;
+}
+
+/* สำหรับการจัดการแบบฟอร์ม radio button */
+.gender-label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+input[type="radio"] + label {
+    margin-right: 10px;
+}
+
+fieldset input[type="radio"] {
+    margin-left: 15px;
+}
+
